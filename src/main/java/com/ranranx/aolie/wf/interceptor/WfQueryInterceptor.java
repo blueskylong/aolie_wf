@@ -158,7 +158,7 @@ public class WfQueryInterceptor implements IOperInterceptor {
                 WfConstants.DEFAULT_WF_SCHEMA, tableInfo.getTableDto().getVersionCode());
         dto.setFieldTo(tableAudit.findColumnByName(WfAuditField.bizField).getColumnDto().getColumnId());
         dto.setFieldFrom(tableInfo.getKeyColumn().get(0).getColumnDto().getColumnId());
-        dto.setRelationType(Constants.TableRelationType.TYPE_ONE_ONE0);
+        dto.setRelationType(Constants.TableRelationType.TYPE_ONE_ONE);
         dto.setVersionCode(tableAudit.getTableDto().getVersionCode());
         TableColumnRelation auditToBizRelation = new TableColumnRelation();
         auditToBizRelation.setDto(dto);
